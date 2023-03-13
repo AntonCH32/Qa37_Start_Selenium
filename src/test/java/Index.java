@@ -17,16 +17,18 @@ public class Index {
     public void setUp()
     {
         wd = new ChromeDriver();
-        wd.get("file:///C:/Users/Toxa32/Downloads/index.html#item1");
+        wd.get("file:///C:/Users/Toxa32/Downloads/index.html");
     }
+
     @Test
     public void tableTest()
     {
         //Canada
-        WebElement canada = wd.findElement(By.cssSelector("tr:nth-child(3)>td:last-child"));
+        WebElement canada = wd.findElement(By.cssSelector("tr:nth-child(3) td:last-child"));
 
         Assert.assertEquals(canada.getText(),"Canada");
     }
+
 
     @Test
     public void cssLocators(){
